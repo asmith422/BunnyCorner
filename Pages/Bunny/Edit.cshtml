@@ -1,0 +1,61 @@
+﻿@page
+@model FinalProjectSmithAshley.Pages.Bunny.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>TblBunny</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TblBunny.Breed" />
+            <div class="form-group">
+                <label asp-for="TblBunny.WeightLbs" class="control-label"></label>
+                <input asp-for="TblBunny.WeightLbs" class="form-control" />
+                <span asp-validation-for="TblBunny.WeightLbs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunny.LengthInches" class="control-label"></label>
+                <input asp-for="TblBunny.LengthInches" class="form-control" />
+                <span asp-validation-for="TblBunny.LengthInches" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunny.Lifespan" class="control-label"></label>
+                <input asp-for="TblBunny.Lifespan" class="form-control" />
+                <span asp-validation-for="TblBunny.Lifespan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunny.Origin" class="control-label"></label>
+                <input asp-for="TblBunny.Origin" class="form-control" />
+                <span asp-validation-for="TblBunny.Origin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunny.Domesticated" class="control-label"></label>
+                <input asp-for="TblBunny.Domesticated" class="form-control" />
+                <span asp-validation-for="TblBunny.Domesticated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunny.Temperment" class="control-label"></label>
+                <input asp-for="TblBunny.Temperment" class="form-control" />
+                <span asp-validation-for="TblBunny.Temperment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

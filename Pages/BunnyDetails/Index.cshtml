@@ -1,0 +1,76 @@
+﻿@page
+@model FinalProjectSmithAshley.Pages.BunnyDetails.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bunnies</h1>
+</div>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBunnyDetail[0].Breed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBunnyDetail[0].BreederLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBunnyDetail[0].Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBunnyDetail[0].Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBunnyDetail[0].Dob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBunnyDetail[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBunnyDetail[0].Notes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.TblBunnyDetail) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Breed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BreederLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.BunnyName">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.BunnyName">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.BunnyName">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

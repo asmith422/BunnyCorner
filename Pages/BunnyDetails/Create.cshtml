@@ -1,0 +1,68 @@
+﻿@page
+@model FinalProjectSmithAshley.Pages.BunnyDetails.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>TblBunnyDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TblBunnyDetail.BunnyName" class="control-label"></label>
+                <input asp-for="TblBunnyDetail.BunnyName" class="form-control" />
+                <span asp-validation-for="TblBunnyDetail.BunnyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunnyDetail.BreederLastName" class="control-label"></label>
+                <select asp-for="TblBunnyDetail.BreederLastName" class ="form-control" asp-items="ViewBag.BreederLastName"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunnyDetail.Breed" class="control-label"></label>
+                <select asp-for="TblBunnyDetail.Breed" class ="form-control" asp-items="ViewBag.Breed"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunnyDetail.Sex" class="control-label"></label>
+                <input asp-for="TblBunnyDetail.Sex" class="form-control" />
+                <span asp-validation-for="TblBunnyDetail.Sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunnyDetail.Color" class="control-label"></label>
+                <input asp-for="TblBunnyDetail.Color" class="form-control" />
+                <span asp-validation-for="TblBunnyDetail.Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunnyDetail.Dob" class="control-label"></label>
+                <input asp-for="TblBunnyDetail.Dob" class="form-control" />
+                <span asp-validation-for="TblBunnyDetail.Dob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunnyDetail.Price" class="control-label"></label>
+                <input asp-for="TblBunnyDetail.Price" class="form-control" />
+                <span asp-validation-for="TblBunnyDetail.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblBunnyDetail.Notes" class="control-label"></label>
+                <input asp-for="TblBunnyDetail.Notes" class="form-control" />
+                <span asp-validation-for="TblBunnyDetail.Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

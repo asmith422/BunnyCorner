@@ -1,0 +1,75 @@
+﻿@page
+@model FinalProjectSmithAshley.Pages.BreederDetails.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Breeders</h1>
+</div>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBreederDetail[0].BreederFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBreederDetail[0].BreederLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBreederDetail[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBreederDetail[0].City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBreederDetail[0].State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBreederDetail[0].PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblBreederDetail[0].Rating)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.TblBreederDetail) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BreederFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BreederLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.BreederLastName">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.BreederLastName">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.BreederLastName">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

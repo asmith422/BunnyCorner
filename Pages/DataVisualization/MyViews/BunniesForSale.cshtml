@@ -1,0 +1,59 @@
+﻿@page
+@model FinalProjectSmithAshley.Pages.DataVisualization.MyViews.BunniesForSaleModel
+@{
+    ViewData["Title"] = "Bunnies For Sale";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bunnies For Sale</h1>
+</div>
+<table id="myTable" class="table-striped table-bordered" style="width:100%;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VwBunnyForSale[0].BunnyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VwBunnyForSale[0].BreederLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VwBunnyForSale[0].Breed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VwBunnyForSale[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VwBunnyForSale[0].State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VwBunnyForSale[0].PhoneNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.VwBunnyForSale)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BunnyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BreederLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Breed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

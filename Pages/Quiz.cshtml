@@ -1,0 +1,73 @@
+﻿@page
+@model FinalProjectSmithAshley.Pages.QuizModel
+@{
+    ViewData["Title"] = "Quiz";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Bunny Quiz</h1>
+    </div>
+    <div>
+        <h5> Which Bunny is Best For You? </h5>
+        <table>
+            <tr>
+                <td> First name:</td>
+                <td> <input type="text" id="fname" size="15"></td>
+                <td> Last name: </td>
+                <td><input type="text" id="lname" size="15"></td>
+            </tr>
+            <tr>
+                <td> Would you prefer a small or big bunny? </td>
+                <td>
+                    <input type="radio" id="small" name="size" value="small">
+                    Small  <input type="radio" id="big" name="size" value="big"> Big
+                </td>
+
+            </tr>
+            <tr>
+                <td> Do you have other animals? </td>
+                <td>
+                    <input type="radio" id="yes" name="animals" value="yes">
+                    Yes  <input type="radio" id="no" name="animals" value="no"> No
+                </td>
+
+            </tr>
+            <tr>
+                <td> Are you shy or outgoing? </td>
+                <td>
+                    <input type="radio" id="shy" name="personality" value="shy">
+                    Shy  <input type="radio" id="outgoing" name="personality" value="outgoing"> Outgoing
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td> How would you describe your schedule? </td>
+                <td>
+                    <select id="schedule" name="schedule" style="width:100px;font-size:1rem;">
+                        <option value="busy"> Busy </option>
+                        <option value="moderate" selected> Moderate</option>
+                        <option value="free"> Free</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> <button onclick="bunnyQuiz()"> Bunny Result </button> </td>
+                <td><button onclick="refreshMe()">  Refresh  </button>   </td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <h5 id="resultStatement">
+        Quiz Results:<br>
+    </h5>
+    <br>
+    <br><br><img src=" " id="bunny">
+
+    <br>
+</body>
+

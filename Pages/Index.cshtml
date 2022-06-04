@@ -1,0 +1,55 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome to</h1>
+        <img src="~/images/bunnycorner.png" ; style="width:50%;align-self:center;" />
+    </div>
+
+    <h5> Learn more about what types of bunnies are out there so you can make the best decision for you and your new bunny!</h5>
+    <h5>Take our quiz to see which breed is the right fit for you and browse what bunnies our trusted breeders have!</h5>
+    <hr>
+    <div>
+        <h5> Most Common Breeds of Bunnies: </h5>
+        <table id="bunnyBreeds">
+            <tr>
+                <th>American Rabbit</th>
+                <th>Dutch Rabbit</th>
+                <th>Eastern Cottontail</th>
+                <th>European Rabbit</th>
+                <th>Flemish Giant Rabbit</th>
+                <th>Holland Lop</th>
+            </tr>
+            <tr>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/americanrabbit.jpeg" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/dutchrabbit.png" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/easterncottontail.jpeg" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/europeanrabbit.jpeg" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/flemishgiant.jpeg" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/hollandlop.jpeg" ; style="width: 200px; height: 170px"></a></td>
+            </tr>
+            <tr>
+                <th>Lionhead</th>
+                <th>Mini Lop</th>
+                <th>Netherland Dwarf Rabbit</th>
+                <th>Polish Rabbit</th>
+                <th>Rex Rabbit</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/lionhead.jpeg" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/minilop.jpeg" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/netherlanddwarf.jpeg" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/polishrabbit.jpeg" ; style="width: 200px; height: 170px"></a></td>
+                <td><a asp-page="/Bunny/Index"><img src="~/images/rexrabbit.jpeg" ; style="width: 200px; height: 170px"></a></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+
+</body>
