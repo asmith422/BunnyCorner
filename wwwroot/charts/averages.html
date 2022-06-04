@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Breed', 'Avg Lifespan(in Years)', 'Avg Weight(in lbs)', 'Avg Length(in inches)'],
+        ['Holland Lop', 10, 3, 5.5],
+        ['Netherland Dwarf Rabbit', 12, 2, 6],
+        ['European Rabbit', 9, 4, 17],
+        ['Mini Lop', 11, 3, 4.5],
+        ['Flemish Giant Rabbit', 9, 19, 30],
+	['Rex Rabit', 7.5, 9, 12],
+	['American Rabbit', 8, 10, 15],
+	['Eastern Cottontail', 1.5, 2.5, 15],
+	['Lionhead', 9, 3, 9],
+	['Polish Rabbit', 5.5, 3, 8],
+	['Dutch Rabbit', 8, 4, 12]
+        ]);
+
+        var options = {
+          chart: {
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+      <div class="text-center">
+          <h1 class="display-4">Average Lifespan, Weight, and Length of Bunny Breeds</h1>
+      </div>
+      <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

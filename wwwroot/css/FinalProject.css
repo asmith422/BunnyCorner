@@ -1,0 +1,63 @@
+﻿* {
+    font-size: 16px;
+    font-family: Verdana;
+    background-color: #d1d1e0;
+}
+
+body {
+    font-family: garamond;
+    font-size: 16px;
+    background-color: #d1d1e0;
+}
+
+h2 {
+    font-family: Verdana;
+    color: #00e600;
+    font-size: 50px;
+    text-align: center;
+    border-bottom: dotted;
+    border-color: #004d00;
+    border-width: 10px;
+    padding-bottom: 25px;
+}
+
+h5 {
+    font-family: Verdana;
+    color: black;
+    font-size: 20px;
+}
+
+
+table {
+    display: inline-block;
+    border-style: dotted;
+    border-color: #004d00;
+    border-width: 10px;
+    padding: 10px;
+}
+
+td {
+    text-align: left;
+}
+
+img {
+    border-style: dotted;
+    border-color: #004d00;
+    border-width: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 170px;
+    display: none;
+    margin-left: 550px;
+}
+
+#resultStatement {
+    width: 50%;
+    height: 50%;
+    padding: 25px;
+    order: 3px #5900a6 double;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+    margin-left: 300px;
+}

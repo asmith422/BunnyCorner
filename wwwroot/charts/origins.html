@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Breed'],
+          ['Germany', 'Mini Lop'],
+          ['Netherlands', 'Holland Lop'],
+          ['Holland', 'Netherland Dwarf Rabbit'],
+          ['Canada', 'Eastern Cottontail'],
+          ['France', 'Rex Rabbit'],
+          ['France', 'European Rabbit'],
+          ['Flanders', 'Flemish Giant Rabbit'],
+          ['England', 'Polish Rabbit'],
+          ['England', 'Dutch Rabbit'],
+          ['United States', 'American Rabbit']
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Origins</h1>
+    </div>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+</body>
+</html>
